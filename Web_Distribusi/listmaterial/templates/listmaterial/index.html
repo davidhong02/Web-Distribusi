@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>{{page_title}}</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    
+    {% include "snippets/bootstrapstyles.html" %}
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'listmaterial/css/styles2.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body id="page-top">
+    {% include "snippets/navbar.html" %}
+
+
+    <div class="jumbotron jumbotron-fluid" style="padding-bottom: 130px;">
+        <div class="container"> 
+            <h1 class="jumbotron-heading" >List Material</h1>
+            <p class="lead">Silakan Baca Instruksi di Bawah ini Terlebih Dahulu</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container bg-white text-dark shadow" style="margin-top:50px">
+            <div class="row" style="height:300px">
+                <h2> Instruksi </h2>
+                <p style="margin-top: -100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore ullam quisquam sint nostrum neque inventore quaerat maxime suscipit quis, aperiam tenetur, eligendi eum beatae necessitatibus? Quaerat aliquam nobis tenetur.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h3>Daftar Material</h3>
+        <form action="/distribusimaterial/" method="POST">
+            {% csrf_token %}
+            <table class="table table-striped" id="Table1">
+                <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
+                    <th scope="col">No</th>
+                    <th scope="col">Id Material</th>
+                    <th scope="col">Nama Material</th>
+                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Berat (Kg)</th>
+                    <th scope="col">Deskripsi</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for data in daftar_material %}
+                        <tr>
+                            <th><input type="checkbox" name="chkbox[]" value="{{data.nama_material}}"></th>
+                            <th scope="row">{{forloop.counter}}</th>
+                            <td>{{data.material_id}}</td>
+                            <td>{{data.nama_material}}</td>
+                            <td>{{data.tanggal_masuk}}</td>
+                            <td>{{data.berat_kg}}</td>
+                            <td>{{data.deskripsi}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <button type="submit" class="btn btn-primary">Distribute</button>
+            <a class="btn btn-primary" href="/listmaterial/tambah">Tambah</a>
+        </form>
+    </div>
+    
+    
+    <br>
+    <br>
+    <br>
+
+    {% include "snippets/footer.html" %}
+
+    {% include "snippets/bootstrapscripts.html" %}
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'listmaterial/js/scriptsmaterial.js' %}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>

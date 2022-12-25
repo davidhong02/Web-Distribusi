@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Title}}</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    
+    {% include "snippets/bootstrapstyles.html" %}
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'listgudang/css/styles.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    {% include "snippets/navbar.html" %}
+
+    <div class="jumbotron jumbotron-fluid" style="padding-bottom: 150px;">
+        <div class="container"> 
+            <h1 class="jumbotron-heading" style="margin-bottom: 10px; font-size: 50px;">Lini Produksi</h1>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3>Berikut merupakan daftar material pada setiap lini produksi</h3>
+    </div>
+    <br>
+    <br>
+    <div class="container shadow">
+        <div class="row">
+            <h1>List Material di Lini Produksi 1</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, molestias quia omnis quis alias accusamus quibusdam. Et illo perspiciatis provident commodi assumenda incidunt similique, nemo rerum ea! Dolorem, molestias perferendis.</p>
+                {% for x in liniproduksi1 %}
+                    <li>{{x.material_id}} {{x.material_name}}</li>
+                {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container shadow">
+        <div class="row">
+            <h1>List Material di Lini Produksi 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nesciunt incidunt expedita quos labore aperiam at veritatis necessitatibus, est neque sunt tempora hic nemo? Explicabo dolores perspiciatis quidem odit commodi!</p>
+                {% for x in liniproduksi2 %}
+                    <li>{{x.material_id}} {{x.material_name}}</li>
+                {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container shadow">
+        <div class="row">
+            <h1>List Material di Lini Produksi 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, molestiae ducimus provident esse numquam perferendis voluptate maiores qui aperiam omnis nisi quas excepturi laboriosam animi sapiente veritatis! Distinctio, perspiciatis placeat.</p>
+                {% for x in liniproduksi3 %}
+                    <li>{{x.material_id}} {{x.material_name}}</li>
+                {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container shadow">
+        <div class="row">
+            <h1>List Material di Lini Produksi 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptates asperiores fugiat aperiam ipsa fugit cupiditate, beatae velit distinctio laboriosam. Accusamus incidunt beatae, nam provident quas voluptatum unde dolore officia!</p>
+                {% for x in liniproduksi4 %}
+                    <li>{{x.material_id}} {{x.material_name}}</li>
+                {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+        {% include "snippets/footer.html" %}
+
+        {% include "snippets/bootstrapscripts.html" %}
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'listmaterial/js/scriptsmaterial.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
