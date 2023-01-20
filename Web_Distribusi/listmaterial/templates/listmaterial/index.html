@@ -32,9 +32,26 @@
 
     <div class="container-fluid">
         <div class="container bg-white text-dark shadow" style="margin-top:50px">
-            <div class="row" style="height:300px">
-                <h2> Instruksi </h2>
-                <p style="margin-top: -100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore ullam quisquam sint nostrum neque inventore quaerat maxime suscipit quis, aperiam tenetur, eligendi eum beatae necessitatibus? Quaerat aliquam nobis tenetur.</p>
+            <div class="row" style="height:350px">
+                <h2 style="margin-bottom:-10px"> Instruksi </h2>
+                    <p>
+                        Anda dapat melakukan proses <strong>penambahan material baru</strong> dan juga <strong>proses distribusi</strong> pada laman ini. Berikut langkah-langkah yang perlu anda ikuti:
+                        <ol style="margin-top: -10px;">
+                            <li>
+                                Untuk menambahkan material baru, tekan tombol <strong>tambah</strong> dan anda akan diarahkan ke laman baru berisi form untuk menambahkan material baru. Masukkan data-data material yang dibutuhkan mulai dari id, nama, berat, dan juga deskripsi material tersebut. Apabila tidak ada deskripsi khusus yang diperlukan, anda dapat isi dengan "Belum ada"
+                            </li>
+                            <br>
+                            <li>
+                              Untuk melakukan proses distribusi material, ceklis material yang ingin anda distribusikan kemudian tekan tombol <strong>distribusi</strong> dan anda akan diarahkan ke laman baru berisi form untuk mendistribusikan material yang anda pilih. Silahkan pilih lini produksi untuk setiap material
+                            </li>
+                            <br>
+                            <li>
+                                List material yang ada di bawah ini merupakan daftar material baru yang belum didistribusi. Oleh karena itu, setiap material yang telah didistribusikan akan dihapus oleh sistem secara otomatis dari tabel daftar material di bawah ini
+                            </li>
+                        </ol>
+                        
+                        
+                    </p>
             </div>
         </div>
     </div>
@@ -69,7 +86,7 @@
                 </tbody>
             </table>
             <br>
-            <button type="submit" class="btn btn-primary">Distribute</button>
+            <button type="submit" class="btn btn-primary">Distribusi</button>
             <a class="btn btn-primary" href="/listmaterial/tambah">Tambah</a>
         </form>
     </div>

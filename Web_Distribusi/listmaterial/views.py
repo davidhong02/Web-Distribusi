@@ -24,7 +24,7 @@ def create(request):
             listform.save()
             
             return redirect('/listmaterial')
-
+    print(request.POST)
     context = {
         'page_title':'Tambah Material',
         'heading':'Tambah Material',

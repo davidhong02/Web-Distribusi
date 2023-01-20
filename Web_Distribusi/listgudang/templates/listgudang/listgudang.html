@@ -35,10 +35,14 @@
     <div class="container shadow">
         <div class="row">
             <h1>List Material di Lini Produksi 1</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, molestias quia omnis quis alias accusamus quibusdam. Et illo perspiciatis provident commodi assumenda incidunt similique, nemo rerum ea! Dolorem, molestias perferendis.</p>
+            <p align="justify">Lini produksi 1 merupakan unit produksi machining yang terdiri atas beberapa machining centre. Machining centre merupakan mesin perkakas yang digunakan untuk mengerjakan benda kerja dengan tingkat presisi yang tinggi dan menghasilkan hasil akhir yang berkualitas tinggi. Beberapa fitur yang umum ada pada machining center adalah kemampuan untuk melakukan penyelarasan otomatis, pengaturan kecepatan spindle yang dapat diatur, dan kemampuan untuk memprogram mesin secara otomatis untuk mengerjakan serangkaian tindakan dengan tingkat presisi yang tinggi.
+            </p>
                 {% for x in liniproduksi1 %}
                     <li>{{x.material_id}} {{x.material_name}}</li>
                 {% endfor %}
+            <br>
+            <p>Kapasitas: {{kapasitas1}}/50</p>
+            <p>Status Gudang 1: <strong>{{status1}}</strong></p>
         </div>
     </div>
     <br>
@@ -46,10 +50,14 @@
     <div class="container shadow">
         <div class="row">
             <h1>List Material di Lini Produksi 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nesciunt incidunt expedita quos labore aperiam at veritatis necessitatibus, est neque sunt tempora hic nemo? Explicabo dolores perspiciatis quidem odit commodi!</p>
+            <p align="justify">Lini produksi 2 merupakan unit produksi proses pengelasan. Pengelasan adalah proses penyambungan dua atau lebih benda logam dengan menggunakan panas dan tekanan untuk membuat sambungan yang kuat. Ada beberapa cara untuk melakukan pengelasan, seperti pengelasan otomatis, pengelasan tangan, dan pengelasan gas. Pengelasan biasanya digunakan dalam industri manufaktur untuk menyambung benda kerja yang akan digunakan dalam struktur atau komponen yang membutuhkan kekuatan yang tinggi. 
+            </p>
                 {% for x in liniproduksi2 %}
                     <li>{{x.material_id}} {{x.material_name}}</li>
                 {% endfor %}
+            <br>
+            <p>Kapasitas: {{kapasitas2}}/50</p>
+            <p>Status Gudang 2: <strong>{{status2}}</strong></p>
         </div>
     </div>
     <br>
@@ -57,10 +65,14 @@
     <div class="container shadow">
         <div class="row">
             <h1>List Material di Lini Produksi 3</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, molestiae ducimus provident esse numquam perferendis voluptate maiores qui aperiam omnis nisi quas excepturi laboriosam animi sapiente veritatis! Distinctio, perspiciatis placeat.</p>
+            <p align="justify">Lini produksi 3 merupakan unit produksi proses assembly. Proses assembly adalah proses pemasangan berbagai komponen yang telah dibuat sebelumnya menjadi suatu produk yang siap digunakan. Proses ini terdiri dari beberapa tahap, yaitu tahap pemasangan komponen utama, tahap pemasangan komponen tambahan, dan tahap pengujian serta verifikasi. Setelah semua tahap selesai, produk yang telah disusun tersebut akan diuji kembali untuk memastikan bahwa semua komponen terpasang dengan benar dan produk tersebut siap digunakan sesuai dengan tujuannya.
+            </p>
                 {% for x in liniproduksi3 %}
                     <li>{{x.material_id}} {{x.material_name}}</li>
                 {% endfor %}
+            <br>
+            <p>Kapasitas: {{kapasitas3}}/50</p>
+            <p>Status Gudang 3: <strong>{{status3}}</strong></p>
         </div>
     </div>
     <br>
@@ -68,10 +80,14 @@
     <div class="container shadow">
         <div class="row">
             <h1>List Material di Lini Produksi 4</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptates asperiores fugiat aperiam ipsa fugit cupiditate, beatae velit distinctio laboriosam. Accusamus incidunt beatae, nam provident quas voluptatum unde dolore officia!</p>
+            <p align="justify">Lini produksi 4 merupakan unit produksi proses finishing. Proses finishing adalah tahap terakhir dari proses produksi yang dilakukan setelah semua proses sebelumnya selesai. Proses finishing biasanya dilakukan untuk memberikan sentuhan akhir pada produk agar siap digunakan atau dijual. Proses finishing dapat berupa proses pembersihan, pengecatan, pengerjaan permukaan, atau proses lain yang bertujuan untuk memberikan tampilan yang lebih baik pada produk sesuai dengan request dari client. Proses finishing juga dapat dilakukan untuk meningkatkan keawetan produk, misalnya dengan memberikan lapisan pelindung pada permukaan produk.
+            </p>
                 {% for x in liniproduksi4 %}
                     <li>{{x.material_id}} {{x.material_name}}</li>
                 {% endfor %}
+            <br>
+            <p>Kapasitas: {{kapasitas4}}/50</p>
+            <p>Status Gudang 4: <strong>{{status4}}</strong></p>
         </div>
     </div>
 

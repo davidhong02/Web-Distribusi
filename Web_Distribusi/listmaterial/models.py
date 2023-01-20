@@ -6,7 +6,7 @@ class ListModel(models.Model):
     material_id = models.CharField(max_length=10)
     nama_material = models.CharField(max_length=255)
     tanggal_masuk = models.DateTimeField(auto_now_add=True)
-    berat_kg = models.IntegerField()
+    berat_kg = models.FloatField()
     deskripsi = models.TextField()
 
     def __str__(self):
